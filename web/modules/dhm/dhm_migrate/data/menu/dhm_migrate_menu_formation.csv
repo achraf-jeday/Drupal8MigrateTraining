@@ -1,0 +1,7 @@
+id,title,link,weight
+1,Drupal,internal:/,0
+2,Symfony,internal:/,10
+3,JEE,internal:/,20
+4,JavaScript,internal:/,30
+5,Angular,internal:/,40
+6,React,internal:/,50

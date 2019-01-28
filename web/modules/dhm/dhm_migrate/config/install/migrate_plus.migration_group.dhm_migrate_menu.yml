@@ -1,0 +1,8 @@
+id: dhm_migrate_menu
+label: Menu
+description: Migration des menus.
+source_type: CSV files
+dependencies:
+  enforced:
+    module:
+      - dhm_migrate

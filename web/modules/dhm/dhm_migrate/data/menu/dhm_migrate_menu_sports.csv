@@ -1,0 +1,10 @@
+id,title,link,weight
+1,Football/Soccer,internal:/,0
+2,Basketball,internal:/,10
+3,Cricket,internal:/,20
+4,Tennis,internal:/,30
+5,Athletics,internal:/,40
+6,Rugby,internal:/,50
+7,Formula 1,internal:/,60
+8,Boxing,internal:/,70
+9,skiing,internal:/,80

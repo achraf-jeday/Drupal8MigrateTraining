@@ -1,0 +1,29 @@
+id: dhm_migrate_taxonomy_skills
+label: "Migration de la taxonomie skills"
+migration_group: dhm_migrate_taxonomy
+migration_tags:
+- taxonomy
+- dhm_skills
+dependencies:
+  enforced:
+    module:
+    - dhm_migrate
+langcode: fr
+status: true
+source:
+  plugin: csv
+  path: modules/dhm/dhm_migrate/data/taxonomy/dhm_migrate_taxonomy_skills.csv
+  header_row_count: 1
+  delimiter: ','
+  keys:
+    - id
+process:
+  vid:
+    plugin: default_value
+    #This is the vocabulary name in Drupal
+    default_value: skills
+  name: skill
+  weight: weight
+destination:
+  plugin: 'entity:taxonomy_term'
+migration_dependencies: {  }

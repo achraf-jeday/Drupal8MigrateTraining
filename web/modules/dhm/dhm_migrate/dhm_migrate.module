@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains dhm_migrate.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dhm_migrate_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dhm_migrate module.
+    case 'help.page.dhm_migrate':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Migration des contenus') . '</p>';
+      return $output;
+
+    default:
+  }
+}

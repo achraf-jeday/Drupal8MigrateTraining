@@ -1,0 +1,23 @@
+name: 'DHM Migrate'
+type: module
+description: 'Migration des contenus'
+core: 8.x
+package: 'dhm'
+dependencies:
+  - migrate
+  - migrate_plus
+  - migrate_tools
+  - migrate_drupal
+  - migrate_upgrade
+  - migrate_source_csv
+  - taxonomy
+  - config_devel
+config_devel:
+  install:
+    - migrate_plus.migration_group.dhm_migrate_taxonomy
+    - migrate_plus.migration_group.dhm_migrate_menu
+    - migrate_plus.migration.dhm_migrate_taxonomy_skills
+    - migrate_plus.migration.dhm_migrate_menu_formation
+    - migrate_plus.migration.dhm_migrate_menu_sports
+    - migrate_plus.migration.custom_user
+    - migrate_plus.migration.custom_article

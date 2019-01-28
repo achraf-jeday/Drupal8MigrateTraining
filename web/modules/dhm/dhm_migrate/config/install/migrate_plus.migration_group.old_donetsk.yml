@@ -1,0 +1,15 @@
+# A human-friendly label for the group.
+id: old_donetsk
+# A human-friendly label for the group.
+label: Old Donetsk
+# More information about the group.
+description: migrate from old donetsk site
+# Short description of the type of source, e.g. "Drupal 6" or "WordPress".
+source_type: old donetks db, files
+shared_configuration:
+  source:
+    key: default
+dependencies:
+  enforced:
+    module:
+      - dhm_migrate

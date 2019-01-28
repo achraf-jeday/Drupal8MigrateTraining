@@ -1,0 +1,8 @@
+id: dhm_migrate_taxonomy
+label: Taxonomy de base
+description: Migration des taxonomies de base.
+source_type: CSV files
+dependencies:
+  enforced:
+    module:
+      - dhm_migrate
