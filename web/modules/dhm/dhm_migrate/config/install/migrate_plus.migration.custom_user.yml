@@ -44,7 +44,6 @@ process:
       1: plain_text
       2: basic_html
       3: full_html
-      4: full_html
   roles:
     plugin: static_map
     bypass: true
@@ -52,3 +51,16 @@ process:
     map:
       2: authenticated
       3: administrator
+
+  user_picture:
+    -
+      plugin: default_value
+      source: picture
+      default_value: null
+    -
+      plugin: migration_lookup
+      migration: drupal7_image
+
+migration_dependencies:
+  required:
+    - drupal7_image
