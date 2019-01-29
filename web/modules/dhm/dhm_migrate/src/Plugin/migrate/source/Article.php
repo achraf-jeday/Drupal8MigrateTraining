@@ -93,32 +93,15 @@ class Article extends SqlBase {
       }
     }
 
-    // images
-    $result = $this->getDatabase()->query('
-      SELECT
-        fld.field_image_fid,
-        fld.field_image_alt,
-        fld.field_image_title,
-        fld.field_image_width,
-        fld.field_image_height
-      FROM
-        {field_data_field_image} fld
-      WHERE
-        fld.entity_id = :nid
-    ', array(':nid' => $nid));
-    // Create an associative array for each row in the result. The keys
-    // here match the last part of the column name in the field table.
-    $images = [];
-    foreach ($result as $record) {
-      $images[] = [
-        'target_id' => $record->field_files_fid,
-        'alt' => $record->field_image_alt,
-        'title' => $record->field_image_title,
-        'width' => $record->field_image_width,
-        'height' => $record->field_image_height,
-      ];
-    }
-    $row->setSourceProperty('images', $images);
+    // images FID.
+    $poster_query = $this->select('field_data_field_image', 'img')
+      ->fields('img', ['field_image_fid'])
+      ->condition('entity_type', 'node')
+      ->condition('bundle', 'article')
+      ->condition('entity_id', $nid)
+      ->execute()
+      ->fetch();
+    $row->setSourceProperty('field_image_fid', $poster_query['field_image_fid']);
 
     return parent::prepareRow($row);
   }
@@ -167,6 +150,7 @@ class Article extends SqlBase {
       'promote' => $this->t('Promoted to front page'),
       'sticky' => $this->t('Sticky at top of lists'),
       'language' => $this->t('Language (fr, en, ...)'),
+      'field_image_fid' => $this->t('File ID for image'),
     );
     return $fields;
   }

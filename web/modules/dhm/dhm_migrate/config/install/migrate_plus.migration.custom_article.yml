@@ -37,4 +37,7 @@ process:
   'body/value': body_value
   'body/summary': body_summary
   field_tags: tags
-  field_image: images
+  field_image/target_id:
+    plugin: migration_lookup
+    migration: drupal7_image
+    source: field_image_fid
