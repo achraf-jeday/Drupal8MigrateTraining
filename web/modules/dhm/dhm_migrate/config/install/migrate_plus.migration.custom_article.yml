@@ -29,14 +29,11 @@ process:
   sticky: sticky
   'body/format':
     plugin: static_map
-    bypass: false
     source: 'body_format'
     map:
-      1: restricted_html  # Filtered HTML
-      2: full_html        # Full HTML
-      3: restricted_html  # PHP code
-      6: plain_text       # Plaintext
-      11: full_html       # Unfiltered HTML
+      filtered_html: restricted_html
+      full_html: full_html
+      plain_text: plain_text
   'body/value': body_value
   'body/summary': body_summary
   field_tags: tags
