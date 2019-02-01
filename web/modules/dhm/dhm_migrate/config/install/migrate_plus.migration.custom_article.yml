@@ -1,6 +1,6 @@
 id: custom_article
 label: Custom article node migration from Drupal 7
-migration_group: custom
+migration_group: dhm_migrate_taxonomy
 dependencies:
   enforced:
     module:

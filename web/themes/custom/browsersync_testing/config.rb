@@ -1,0 +1,7 @@
+http_path = "/themes/custom/browsersync_testing"
+css_dir = "css"
+sass_dir = "scss"
+images_dir = "assets/images"
+javascripts_dir = "js"
+fonts_dir = "bootstrap/fonts/bootstrap"
+generated_images_dir = "images"
