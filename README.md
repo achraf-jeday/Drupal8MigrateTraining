@@ -37,3 +37,9 @@ $databases['migrate']['default'] = array (
   'driver' => 'mysql',
 );
 ```
+
+Use this command to revert the status of broken migration:
+
+```
+drush php-eval "var_dump(Drupal::keyValue('migrate_status')->set('migration_id', 0));"
+```
