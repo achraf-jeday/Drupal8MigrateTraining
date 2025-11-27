@@ -4,6 +4,8 @@
 
 ### Ce dépôt est destiné à la formation sur la migration de données depuis différentes sources (Drupal 6/7, CSV, CMS, etc.) vers Drupal 8.
 
+Hi Hello it's 2025 and I am learning AI. Cheers !
+
 Configuration directory:
 
 ```
